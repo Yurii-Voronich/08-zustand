@@ -1,4 +1,24 @@
+import { Metadata } from "next";
 import css from "./page.module.css";
+export const metadata: Metadata = {
+  title: "Notehub not-found page",
+  description: "This page is not avialaible at Notehub App",
+  openGraph: {
+    title: `Notehub not-found page`,
+    description: "This page is not avialaible at Notehub App",
+    url: `https://08-zustand-three-nu.vercel.app/`,
+    siteName: "NoteHub",
+    images: [
+      {
+        url: "https://ac.goit.global/fullstack/react/notehub-og-meta.jpg",
+        width: 1200,
+        height: 630,
+        alt: "og notehub",
+      },
+    ],
+    type: "article",
+  },
+};
 const NotFoundPage = () => {
   return (
     <>
