@@ -5,7 +5,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { createNote, type NewNote } from "@/lib/api";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
-import { useNoteStore } from "@/lib/noteStore";
+import { useNoteStore } from "@/lib/store/noteStore";
 
 const NoteForm = () => {
   const queryClient = useQueryClient();
@@ -26,6 +26,7 @@ const NoteForm = () => {
     mutation.mutate(values, {
       onSuccess: () => {
         router.push("/notes/filter/All");
+        clearDraft();
       },
     });
   };
@@ -40,7 +41,6 @@ const NoteForm = () => {
       ...draft,
       [e.target.name]: e.currentTarget.value,
     });
-    console.log(draft);
   };
   return (
     <form className={css.form} action={handleSubmit}>
