@@ -14,12 +14,12 @@ export const generateMetadata = async ({
 }: NotesProps): Promise<Metadata> => {
   const { slug } = await params;
   return {
-    title: `${slug} notes`,
-    description: `Notes list with category ${slug}`,
+    title: `${slug[0]} notes`,
+    description: `Notes list with tag ${slug[0]}`,
     openGraph: {
-      title: `${slug} notes`,
-      description: `Notes list with category ${slug}`,
-      url: `https://08-zustand-three-nu.vercel.app/notes/filter/${slug}`,
+      title: `${slug[0]} notes`,
+      description: `Notes list with tag ${slug[0]}`,
+      url: `https://08-zustand-three-nu.vercel.app/notes/filter/${slug[0]}`,
       siteName: "NoteHub",
       images: [
         {

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     type: "article",
   },
 };
-const CreatPage = () => {
+const CreatePage = () => {
   return (
     <main className={css.main}>
       <div className={css.container}>
@@ -32,4 +32,4 @@ const CreatPage = () => {
   );
 };
 
-export default CreatPage;
+export default CreatePage;

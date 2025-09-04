@@ -2,10 +2,10 @@ import { Metadata } from "next";
 import css from "./page.module.css";
 export const metadata: Metadata = {
   title: "Notehub not-found page",
-  description: "This page is not avialaible at Notehub App",
+  description: "This page is not available at Notehub App",
   openGraph: {
     title: `Notehub not-found page`,
-    description: "This page is not avialaible at Notehub App",
+    description: "This page is not available at Notehub App",
     url: `https://08-zustand-three-nu.vercel.app/`,
     siteName: "NoteHub",
     images: [

@@ -9,7 +9,7 @@ interface noteStore {
 }
 const initialDraft: NewNote = {
   title: "",
-  tag: "",
+  tag: "Todo",
   content: "",
 };
 export const useNoteStore = create<noteStore>()(
@@ -19,6 +19,6 @@ export const useNoteStore = create<noteStore>()(
       setDraft: (note) => set(() => ({ draft: note })),
       clearDraft: () => set(() => ({ draft: initialDraft })),
     }),
-    { name: "draft" }
+    { name: "draft", partialize: (state) => ({ draft: state.draft }) }
   )
 );
